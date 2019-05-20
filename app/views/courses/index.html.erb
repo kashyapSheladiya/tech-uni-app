@@ -5,30 +5,18 @@
 </div>
 
 <div class="row">
-  <div class="col s6 m6">
-    <div class="card orange darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">SD01: Software Engineering</span>
-        <p>Overview of software development process. Overview of software development process. Overview of software development process. 
-        Overview of software development process.Overview of software development process.Overview of software development process.</p>
-      </div>
-      <div class="card-action blue">
-        <a href="#">Enroll</a>
-        <a href="#">info</a>
-      </div>
-    </div>
-  </div>
-  <div class="col s6 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">SD02: Software Engineering in deep</span>
-        <p>Extended software development process. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">Enroll</a>
-        <a href="#">Info</a>
+  <% Course.all.each do |course| %>
+    <div class="col s6 m6">
+      <div class="card orange darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"><%= course.short_name%>: <%= course.name %></span>
+          <%= course.description %>
+        </div>
+        <div class="card-action blue">
+          <a href="#">Enroll</a>
+          <a href="#">info</a>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
