@@ -1,11 +1,11 @@
-<% if @student.errors.any? %>
+<% if obj.errors.any? %>
   <div class="container">
     <div class="col s12 m12 l12">
       <div class="card-panel red lighten-2" id="fade-out-target">
         <span class="white-text">
-          <%= pluralize(@student.errors.count, "error") %>
+          <%= pluralize(obj.errors.count, "error") %>
           <ul>
-            <% @student.errors.full_messages.each do |message| %>
+            <% obj.errors.full_messages.each do |message| %>
               <li> <%= message %> </li>
             <% end %>
           </ul>

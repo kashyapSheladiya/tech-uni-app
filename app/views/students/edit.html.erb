@@ -1,39 +1,4 @@
-<%= render 'layouts/error' %>
+<%= render 'students/form' %>
 
-<div class="row">
-    <div class="col s12">
-      <h3 class= "center-align"><b>Edit Profile</b></h3>
-    </div>
-</div>
 
-<div class="container">
-  <div class="row center">
-    <div class="col s12 m12 l12">
-      <div class="card-panel">
-        <div class="row">
-          <%=  form_for(@student, html: {class: "col s12"}) do |f| %>
 
-            <div class="row">
-              <div class="input-field col s12">
-                <%= f.text_field :name, autofocus: true %>
-                <%= f.label :name %>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s12">
-                <%= f.text_field :email, autofocus: true%>
-                <%= f.label :email %>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <%= f.submit "Update", class: "waves-effect waves-light btn red lighten-2" %>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
