@@ -26,7 +26,7 @@
 
             <div class="row">
               <div class="input-field col s12">
-                <%= f.text_field :email, placeholder: "Enter Your full-name", autofocus: true%>
+                <%= f.text_field :email, placeholder: "Enter Your email", autofocus: true%>
                 <%= f.label :email, class:"active" %>
               </div>
             </div>
@@ -47,7 +47,7 @@
 
             <div class="row">
               <div class="input-field col s12">
-                <%= f.button(@student.new_record? ? "Sign Up" : "Update", class: "waves-effect waves-light btn red lighten-2") %>
+              <%= f.button(@student.new_record? ? '<i class="material-icons right">arrow_forward</i>Sign Up'.html_safe : '<i class="material-icons right">arrow_forward</i>Update'.html_safe, class: "waves-effect waves-light btn red lighten-2") %>
               </div>
             </div>
           <% end %>
