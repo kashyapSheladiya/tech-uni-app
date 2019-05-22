@@ -10,10 +10,12 @@
       <div class="card-action blue">
         <div class="row">
           <div class="col s6 m6">
-            <%= link_to "Update Profile", edit_student_path(@student) %>
+            <%= link_to "STUDENT LIST", students_path %>
           </div>
           <div class="col s6 m6">
-            <a href="">Student List</a>
+            <% if current_user == @student %>
+              <%= link_to "UPDATE PROFILE", edit_student_path(@student) %>
+            <% end %>
           </div>
         </div>
       </div>
