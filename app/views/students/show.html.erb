@@ -5,7 +5,17 @@
         <span class="card-title"><%= @student.name%></span>
         <span><%= @student.email %></span>
         <br>
-        <span>Course Enrollment: none</span>
+        <span>Course Enrollment: 
+          <% if @student.courses.empty? %> 
+            None
+          <% else %>
+            <ul>
+              <% @student.courses.each do |course| %>
+                <li><%= course.name %></li>
+              <% end %>
+            </ul>
+          <% end %>
+        </span>
       </div>
       <div class="card-action blue">
         <div class="row">
