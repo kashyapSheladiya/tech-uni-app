@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'courses#index'
-  get 'courses/new', to: 'courses#new'
+  #get 'courses/new', to: 'courses#new'
+  resources :courses
 
   get 'about', to:'pages#about'
   resources :students
